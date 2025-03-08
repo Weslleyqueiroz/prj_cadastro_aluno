@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Lista de Alunos</title>
+    
+    <style type ="text/css">
+
+        table , tr , th, td {
+            border: 1px solid #00008b
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Alunos matriculados - {{ faculdade }} </h2>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>RA</th> <th>Nome</th> <th>Idade</th> <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for aluno in alunos%}
+            <tr>
+                <td> {{aluno.ra_aluno}} </td>
+                <td> {{aluno.nome_aluno}} </td>
+                <td> {{aluno.idade_aluno}} </td>
+                <td> {{aluno.email_aluno}} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
